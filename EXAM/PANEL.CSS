@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.bts{
+    size: 100px;
+    height: 500px;
+    width: 800px;
+    background-color: white;
+    margin-left: 300px;
+}
+marquee{
+    color: rgb(165, 42, 42);
+    font-size: 50px;
+}
+.padd{
+    padding-left: 150px;
+}
+#la{
+    border-radius: 10px;
+    border: black;
+    border-style: solid;
+    height: 40px;
+    width: 115px;
+}
+button{
+    border: green;
+    border-style: solid;
+    border-radius: 10px;
+    height: 40px;
+    width: 115px;
+}

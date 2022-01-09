@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>EXAM PANEL</title>
+        <link rel="stylesheet" href="PANEL.CSS">
+    </head>
+    <body bgcolor="CYAN">
+    <form>
+        
+        <div class="bts">
+        <marquee behavior="alternate">QUIZ</marquee><hr>
+        <div class="padd">
+        <h1>1.WHICH TAG IS USED TO GET A UNDERLINE</h1><br><br><br>
+        <input type="radio" name="q1" id="q11">HR<br>
+        <input type="radio" name="q1" id="q12">BR<br>
+        <input type="radio" name="q1" id="q13">TR<br>
+<div class="submit"><br>
+    <input type="button" id="la" value="submit" onclick="result()"><br>
+    </div><br>
+      <button>reset</button> 
+      </div> 
+       </div>
+</form>
+<script>
+function result(){
+    let score=0
+    if(document.getElementById('q11').checked)
+    score+=1
+alert("score is"+score)
+}
+</script>
+    </body>
+</html>
