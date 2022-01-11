@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Img-Txt Hover</title>
+	<style type="text/css">
+	img{
+	width: 571px;
+    height: 350px;
+   }
+#txt2{
+    display:none;
+}
+</style>
+</head>
+<body>
+    <center>
+	<div id="main">
+		
+			<img src="flower.jpg" id="img1">
+	
+		
+			<h1 id="txt1">This is a Flower</h1>
+			<h1 id="txt2">This is a Tree</h1>
+	
+	</div>
+    </center>
+
+
+		<script type="text/javascript">
+			document.getElementById('main').addEventListener("mouseover",change1)
+			document.getElementById('main').addEventListener("mouseout",change2)
+
+			function change1(){
+				document.getElementById('img1').src="tree.jpg"
+				document.getElementById('txt1').style.display="none"
+				document.getElementById('txt2').style.display="block"
+			}
+
+			function change2(){
+				document.getElementById('img1').src="flower.jpg"
+				document.getElementById('txt1').style.display="block"
+				document.getElementById('txt2').style.display="none"
+			}
+
+		</script>
+
+</body>
+</html>

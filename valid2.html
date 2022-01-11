@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>validation</title>
+	<link rel="stylesheet" type="text/css" href="validation.css">
+</head>
+<body>
+	<center>
+	<form name="fname">
+	<table border="0">
+		<tr>
+			<th><label>First Name:</th></label>
+			<td><input type="textbox" name="txt1"></td>
+			<td><b id= "error1"></b></td>
+		</tr>
+		<tr>	
+			<th><label>Last Name:</th></label>
+			<td><input type="textbox" name="txt2"></td>
+			<td><b id= "error2"></b></td>
+		</tr>
+		<tr>	
+			<th><label>email:</th></label>
+			<td><input type="email" name="mail1"></td>
+		</tr>
+		<tr>	
+			<th><label>Password:</th></label>
+			<td><input type="password" name="pass1"></td>
+			<td><b id ="pa2"></b></td>
+		</tr>
+		<tr>
+		<th><input type="button" name="button1" value="SUBMIT" onclick='valid1()' class="btn"></th>
+		<th><input type="reset" name="reset" value="RESET" class="sub">
+	</tr>
+        
+	</table>
+	</center>
+	<script>
+		function valid1()
+		{ 
+			let pass =/[0-9!@#$%^&*]/;
+			let first = document.fname.txt1.value;
+			let last = document.fname.txt2.value;
+			let m = document.fname.mail1.value;
+			let p = document.fname.pass1.value;
+			
+			if(first=="") 
+			{
+				document.getElementById('error1').innerHTML = "Enter your First Name";
+			}	
+			if(last=="")
+			{
+				document.getElementById('error2').innerHTML = "Enter your Last Name";
+			}
+            if(pass.test(first))
+            {
+            	document.getElementById('error1').innerHTML = "Enter valid Name";
+            }
+            if(pass.test(last))
+            {	
+            	document.getElementById('error2').innerHTML = "Enter valid Name";
+            }
+            if(p.length > 8)
+            {
+            	document.getElementById('pa2').innerHTML = "Enter only 8 characters";
+
+            }
+            if(p.length < 8)
+            {
+            	document.getElementById('pa2').innerHTML = "Enter atleast 8 characters";
+
+
+            }
+            console.log(first , last , m ,p);
+           
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BGColorChange</title>
+    
+    <style>
+        #btn{
+            margin-top: 22%;
+            margin-left: 43%;
+            width: 180px;
+            height: 60px;
+            background-color: white;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-family: sans-serif;
+            }
+    </style>
+
+</head>
+<body>
+    <input type="button" id="btn" value="Click Here" onClick="colorchange()">
+
+    <script>
+        
+    function colorchange(){
+        let bgcolor='#'+Math.floor(Math.random()*10000000).toString(16)
+        document.body.style.background=bgcolor
+        }
+    </script>
+</body>
+</html>
