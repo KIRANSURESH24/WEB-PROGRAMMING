@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String and Math functions</title>
+</head>
+
+<body>
+    <div>
+        <h2>String Functions</h2>
+            Enter the String 1: 
+            <input type="text" id="str"><br>
+            Enter the String 2: 
+            <input type="text" id="str2"><br>
+            How many time to repeat the String : 
+            <input type="num" id="repeat"><br>
+
+        <input type="button" value="Generate" onclick="string_func()">
+
+        <br><br>
+        <ol id="output" type="1"> </ol>
+    </div>
+
+    <div>
+        <h2>Math Functions</h2>
+            Enter a Number
+            <input type="text" id="num"><br>
+            Power term
+            <input type="text" id="pow"><br>
+        <input type="button" value="Generate" onclick="math_func()">
+
+        <br><br>
+        <ol id="output_math" type="1"> </ol>
+    </div>
+
+
+    <script>
+        function string_func() {
+
+            let sentence = document.getElementById('str').value
+            let anotherSentence = document.getElementById('str2').value
+            let count = document.getElementById('repeat').value
+            let li_O = '<li>';
+            let li_C = '</li>';
+            let list_items;
+            
+			list_items = li_O + "String 1 in lowercase letters: "+sentence.toLowerCase()+ li_C;
+			list_items += li_O +"String 1 in uppercase letters: "+sentence.toUpperCase()+ li_C;
+            list_items += li_O +"Length of the String 1: "+sentence.length+ li_C;
+            list_items += li_O +"Character at Position 4: "+sentence.charAt(4)+ li_C;
+            list_items += li_O +"Repeat string 1 in "+count+" times: "+sentence.repeat(count)+ li_C;
+            list_items += li_O +"Last index position of the given String 1: "+sentence.charAt(4)+ li_C;
+			list_items += li_O +"Concatenates String 1 & String 2: "+sentence.concat(' ',anotherSentence)+ li_C;
+			list_items += li_O +"String sliced from Position 3 to 6:"+sentence.slice(3,6)+ li_C;
+
+            document.getElementById('output').innerHTML = (list_items);
+        }
+
+        function math_func() {
+            let number = document.getElementById('num').value;
+            let power = document.getElementById('pow').value;
+            let li_O = '<li>';
+            let li_C = '</li>';
+            let list_items;
+
+            list_items = li_O + 'Value of PI  : ' + Math.PI + li_C;
+            list_items += li_O + 'Round of  '+number+' is : ' + Math.round(number) + li_C;
+            list_items += li_O + ''+number+' raise to '+power+' is : ' + Math.pow(number,power) + li_C;
+            list_items += li_O + 'Square root of  '+number+' is : ' + Math.sqrt(number) + li_C;
+            list_items += li_O + 'Floor value  of  '+number+' is : ' + Math.floor(number) + li_C;
+            list_items += li_O + 'Sin value  of  '+number+' is : ' + Math.sin(number* Math.PI / 180) + li_C;
+            list_items += li_O + 'Cos value  of  '+number+' is : ' + Math.cos(number* Math.PI / 180) + li_C;
+            list_items += li_O + 'A Random number is : ' + Math.random() + li_C;
+
+            document.getElementById('output_math').innerHTML = (list_items);
+        }
+    </script>
+</body>
+
+</html>
